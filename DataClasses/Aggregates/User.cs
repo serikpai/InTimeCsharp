@@ -8,6 +8,6 @@ namespace InTime.CrossCutting.DataClasses.Aggregates
         public UserId Id { get; set; }
         public UserName Name { get; set; }
         public Email Email { get; set; }
-        public List<Issue> AssignedIssues { get; set; }
+        public List<IssueId> AssignedIssues { get; set; }
     }
 }

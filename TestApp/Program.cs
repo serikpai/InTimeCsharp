@@ -14,7 +14,8 @@ namespace InTime.Ui.TestApp
             issue.Type = IssueType.Story;
             issue.Name = new IssueName("Share this page");
             issue.Description = new IssueDescription("Share this post on your favorite social media platforms!");
-            issue.SubTasks = new List<Issue>
+
+            /*issue.SubTasks = new List<Issue>
             {
                 new Issue
                 {
@@ -32,7 +33,7 @@ namespace InTime.Ui.TestApp
                 {
                     Name = new IssueName("Shared it on Twitter")
                 }
-            };
+            };/**/
         }
     }
 }

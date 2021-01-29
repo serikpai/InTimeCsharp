@@ -14,18 +14,18 @@ namespace InTime.CrossCutting.DataClasses.Aggregates
         public DateTime CreationTime { get; set; }
         public DateTime LastUpdate { get; set; }
 
-        public User Reporter { get; set; }
-        public User Assignee { get; set; }
+        public UserId Reporter { get; set; }
+        public UserId Assignee { get; set; }
 
-        public ProjectVersion AffectVersion { get; set; }
-        public ProjectVersion FixVersion { get; set; }
+        public ProjectVersionId AffectVersion { get; set; }
+        public ProjectVersionId FixVersion { get; set; }
 
         public TimeValue Estimated { get; set; }
         public TimeValue Logged { get; set; }
 
         public IssueDescription Description { get; set; }
-        
-        public List<Issue> SubTasks { get; set; }
+
+        public List<IssueId> SubTasks { get; set; }
 
         public List<Attachment> Attachments { get; set; }
         public List<Comment> Comments { get; set; }

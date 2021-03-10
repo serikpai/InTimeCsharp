@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using InTime.CrossCutting.DataClasses.Entities;
-using InTime.CrossCutting.DataClasses.ValueObjects;
+using Kukshaus.InTime.CrossCutting.DataClasses.Entities;
+using Kukshaus.InTime.CrossCutting.DataClasses.ValueObjects;
 
-namespace InTime.CrossCutting.DataClasses.Aggregates
+namespace Kukshaus.InTime.CrossCutting.DataClasses.Aggregates
 {
     public class Issue
     {

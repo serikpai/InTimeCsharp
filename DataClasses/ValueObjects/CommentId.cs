@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace InTime.CrossCutting.DataClasses.ValueObjects
+namespace Kukshaus.InTime.CrossCutting.DataClasses.ValueObjects
 {
     public struct CommentId : ILocalEntity, IEquatable<CommentId>
     {

@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 
-namespace InTime.CrossCutting.DataClasses.ValueObjects
+namespace Kukshaus.InTime.CrossCutting.DataClasses.ValueObjects
 {
     public class ProjectVersionId
     {

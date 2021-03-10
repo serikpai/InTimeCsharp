@@ -1,6 +1,6 @@
 ﻿using System;
-using InTime.CrossCutting.DataClasses.Aggregates;
-using InTime.CrossCutting.DataClasses.ValueObjects;
+using Kukshaus.InTime.CrossCutting.DataClasses.Aggregates;
+using Kukshaus.InTime.CrossCutting.DataClasses.ValueObjects;
 
 // 1lI O0
 // 0O l1 Z2 S5 G6 B8 71 lI vy

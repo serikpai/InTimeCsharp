@@ -7,6 +7,20 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataClasses", "DataClasses\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "TestApp\TestApp.csproj", "{EA71914E-B5B8-4F9D-A5D1-8D0C4D37F221}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserDataStorage.Contract", "UserDataStorage.Contract\UserDataStorage.Contract.csproj", "{C09B1D7F-0229-49A9-B923-1B5EE7A4BE75}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1_Data", "1_Data", "{84460F55-C7FA-4A74-88B2-7E413059A1F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserDataStorage.InMemory", "UserDataStorage.InMemory\UserDataStorage.InMemory.csproj", "{595C6C00-BE92-4721-8CB9-D771DA5921BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStorage.Contract", "DataStorage.Contract\DataStorage.Contract.csproj", "{83D1191B-6229-418C-91F3-D30ED5061812}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "X_CrossCutting", "X_CrossCutting", "{54489486-7517-4F5F-A290-FB7D3F496A7B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IssueDataStorage.Contract", "IssueDataStorage.Contract\IssueDataStorage.Contract.csproj", "{52C6A8B2-6644-4BF0-87C1-B73D71BCCA43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IssueDataStorage.InMemory", "IssueDataStorage.InMemory\IssueDataStorage.InMemory.csproj", "{309AE49C-9101-4DC7-94ED-857ACE495F96}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,11 +35,39 @@ Global
 		{EA71914E-B5B8-4F9D-A5D1-8D0C4D37F221}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA71914E-B5B8-4F9D-A5D1-8D0C4D37F221}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA71914E-B5B8-4F9D-A5D1-8D0C4D37F221}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C09B1D7F-0229-49A9-B923-1B5EE7A4BE75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C09B1D7F-0229-49A9-B923-1B5EE7A4BE75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C09B1D7F-0229-49A9-B923-1B5EE7A4BE75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C09B1D7F-0229-49A9-B923-1B5EE7A4BE75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{595C6C00-BE92-4721-8CB9-D771DA5921BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{595C6C00-BE92-4721-8CB9-D771DA5921BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{595C6C00-BE92-4721-8CB9-D771DA5921BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{595C6C00-BE92-4721-8CB9-D771DA5921BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83D1191B-6229-418C-91F3-D30ED5061812}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83D1191B-6229-418C-91F3-D30ED5061812}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83D1191B-6229-418C-91F3-D30ED5061812}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83D1191B-6229-418C-91F3-D30ED5061812}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52C6A8B2-6644-4BF0-87C1-B73D71BCCA43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52C6A8B2-6644-4BF0-87C1-B73D71BCCA43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52C6A8B2-6644-4BF0-87C1-B73D71BCCA43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52C6A8B2-6644-4BF0-87C1-B73D71BCCA43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{309AE49C-9101-4DC7-94ED-857ACE495F96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{309AE49C-9101-4DC7-94ED-857ACE495F96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{309AE49C-9101-4DC7-94ED-857ACE495F96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{309AE49C-9101-4DC7-94ED-857ACE495F96}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6B92494F-605A-40DB-8FC4-42A82F39AE29}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C09B1D7F-0229-49A9-B923-1B5EE7A4BE75} = {84460F55-C7FA-4A74-88B2-7E413059A1F5}
+		{595C6C00-BE92-4721-8CB9-D771DA5921BB} = {84460F55-C7FA-4A74-88B2-7E413059A1F5}
+		{83D1191B-6229-418C-91F3-D30ED5061812} = {84460F55-C7FA-4A74-88B2-7E413059A1F5}
+		{28C36385-E10E-4B99-B02F-6FC55B1775A2} = {54489486-7517-4F5F-A290-FB7D3F496A7B}
+		{52C6A8B2-6644-4BF0-87C1-B73D71BCCA43} = {84460F55-C7FA-4A74-88B2-7E413059A1F5}
+		{309AE49C-9101-4DC7-94ED-857ACE495F96} = {84460F55-C7FA-4A74-88B2-7E413059A1F5}
 	EndGlobalSection
 EndGlobal

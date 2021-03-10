@@ -1,4 +1,4 @@
-﻿namespace InTime.CrossCutting.DataClasses.ValueObjects
+﻿namespace Kukshaus.InTime.CrossCutting.DataClasses.ValueObjects
 {
     public class UserId : IValueObject
     {

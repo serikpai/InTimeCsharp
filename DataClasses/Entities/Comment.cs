@@ -1,7 +1,7 @@
 ﻿using System;
-using InTime.CrossCutting.DataClasses.ValueObjects;
+using Kukshaus.InTime.CrossCutting.DataClasses.ValueObjects;
 
-namespace InTime.CrossCutting.DataClasses.Entities
+namespace Kukshaus.InTime.CrossCutting.DataClasses.Entities
 {
     public class Comment : ILocalEntity
     {

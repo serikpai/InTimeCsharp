@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <AssemblyName>Kukshaus.InTime.UserDataStorage.Contract</AssemblyName>
+        <RootNamespace>Kukshaus.InTime.Data.UserDataStorage.Contract</RootNamespace>
+        <LangVersion>9</LangVersion>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\DataStorage.Contract\DataStorage.Contract.csproj" />
+    </ItemGroup>
+
+</Project>

@@ -2,8 +2,10 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <RootNamespace>InTime.CrossCutting.DataClasses</RootNamespace>
-    <AssemblyName>InTime.CrossCutting.DataClasses</AssemblyName>
+    <RootNamespace>Kukshaus.InTime.CrossCutting.DataClasses</RootNamespace>
+    <AssemblyName>Kukshaus.InTime.DataClasses</AssemblyName>
+    <LangVersion>9</LangVersion>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
 
 </Project>

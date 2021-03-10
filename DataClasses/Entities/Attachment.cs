@@ -1,4 +1,4 @@
-﻿namespace InTime.CrossCutting.DataClasses.Entities
+﻿namespace Kukshaus.InTime.CrossCutting.DataClasses.Entities
 {
     public class Attachment : ILocalEntity
     {

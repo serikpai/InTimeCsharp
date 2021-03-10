@@ -1,4 +1,4 @@
-﻿namespace InTime.CrossCutting.DataClasses
+﻿namespace Kukshaus.InTime.CrossCutting.DataClasses
 {
     public interface IValueObject
     {

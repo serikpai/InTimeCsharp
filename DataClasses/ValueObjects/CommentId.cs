@@ -2,15 +2,15 @@
 
 namespace InTime.CrossCutting.DataClasses.ValueObjects
 {
-    public struct IssueId : IValueObject, IEquatable<IssueId> /*IEquatable<IssueId>*/
+    public struct CommentId : ILocalEntity, IEquatable<CommentId>
     {
         private readonly int _id;
 
-        private IssueId(int id)
+        private CommentId(int id)
         {
             if (id <= 0)
             {
-                throw new ArgumentException("The issue id must be a positive number.");
+                throw new ArgumentException("The comment id must be a positive number");
             }
 
             _id = id;
@@ -21,29 +21,29 @@ namespace InTime.CrossCutting.DataClasses.ValueObjects
             return _id;
         }
 
-        public static implicit operator IssueId(int id)
+        public static implicit operator CommentId(int id)
         {
-            return new IssueId(id);
+            return new CommentId(id);
         }
 
-        public static explicit operator int(IssueId id)
+        public static explicit operator int(CommentId id)
         {
             return id._id;
         }
 
-        public static explicit operator string(IssueId id)
+        public static explicit operator string(CommentId id)
         {
             return id._id.ToString();
         }
-        
-        public bool Equals(IssueId other)
+
+        public bool Equals(CommentId other)
         {
-            return _id == other._id;
+            return _id == (int)other;
         }
 
         public override bool Equals(object obj)
         {
-            return obj is IssueId other && Equals(other);
+            return obj is CommentId other && Equals(other);
         }
 
         public override int GetHashCode()
@@ -51,12 +51,12 @@ namespace InTime.CrossCutting.DataClasses.ValueObjects
             return _id.GetHashCode();
         }
 
-        public static bool operator ==(IssueId a, IssueId b)
+        public static bool operator ==(CommentId a, CommentId b)
         {
             return Equals(a, b);
         }
 
-        public static bool operator !=(IssueId a, IssueId b)
+        public static bool operator !=(CommentId a, CommentId b)
         {
             return !Equals(a, b);
         }

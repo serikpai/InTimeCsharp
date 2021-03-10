@@ -1,7 +1,6 @@
 ﻿namespace InTime.CrossCutting.DataClasses.ValueObjects
 {
-    public class UserId
+    public class UserId : IValueObject
     {
-        
     }
 }

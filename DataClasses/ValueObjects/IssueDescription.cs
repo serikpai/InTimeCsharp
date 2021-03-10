@@ -1,12 +1,17 @@
 ﻿namespace InTime.CrossCutting.DataClasses.ValueObjects
 {
-    public class IssueDescription
+    public struct IssueDescription
     {
         private readonly string _description;
 
-        public IssueDescription(string description)
+        private IssueDescription(string description)
         {
             _description = description;
+        }
+
+        public static implicit operator IssueDescription(string description)
+        {
+            return new IssueDescription(description);
         }
     }
 }

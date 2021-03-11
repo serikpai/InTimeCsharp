@@ -12,10 +12,13 @@
 
     <ItemGroup>
       <PackageReference Include="Caliburn.Micro" Version="3.2.0" />
+      <PackageReference Include="Ninject" Version="3.3.4" />
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Models" />
+      <ProjectReference Include="..\Aggregation\Aggregation.csproj" />
+      <ProjectReference Include="..\DataClasses\DataClasses.csproj" />
+      <ProjectReference Include="..\IssueManagement.Contract\IssueManagement.Contract.csproj" />
     </ItemGroup>
 
 </Project>

@@ -35,7 +35,7 @@ namespace Kukshaus.InTime.CrossCutting.DataClasses.ValueObjects
         {
             return id._id.ToString();
         }
-        
+
         public bool Equals(IssueId other)
         {
             return _id == other._id;
@@ -63,7 +63,7 @@ namespace Kukshaus.InTime.CrossCutting.DataClasses.ValueObjects
 
         public override string ToString()
         {
-            return (string)this;
+            return (string) this;
         }
     }
 }

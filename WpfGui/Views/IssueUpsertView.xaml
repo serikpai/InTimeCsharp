@@ -1,0 +1,65 @@
+﻿<Window x:Class="Kukshaus.InTime.Gui.WpfGui.Views.IssueUpsertView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        mc:Ignorable="d"
+        FontFamily="Roboto Mono"
+        Title="Create Task" Height="450" Width="800" WindowStyle="ToolWindow">
+    <Window.Resources>
+        <Style x:Key="PropertyLabelStyle" TargetType="Label">
+            <Setter Property="FontStyle" Value="Italic" />
+            <Setter Property="Foreground" Value="#808080" />
+            <Setter Property="FontSize" Value="14px" />
+        </Style>
+
+        <Style x:Key="NameBoxStyle" TargetType="TextBox">
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="Padding" Value="5" />
+        </Style>
+
+        <Style x:Key="DescriptionBoxStyle" TargetType="TextBox">
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="Padding" Value="5" />
+            <Setter Property="AcceptsReturn" Value="True" />
+            <Setter Property="AcceptsTab" Value="True" />
+            <Setter Property="MinHeight" Value="250" />
+        </Style>
+
+
+        <Style TargetType="Button">
+            <Setter Property="MinWidth" Value="120" />
+            <Setter Property="Padding" Value="5" />
+            <Setter Property="Margin" Value="2" />
+            <Setter Property="FontSize" Value="13" />
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Auto">
+            <StackPanel>
+                <Label Style="{StaticResource PropertyLabelStyle}">Name</Label>
+                <TextBox Text="{Binding Path=Model.Name}" Style="{StaticResource NameBoxStyle}" />
+
+                <Label Style="{StaticResource PropertyLabelStyle}">Description</Label>
+                <TextBox Text="{Binding Path=Model.Description}" Style="{StaticResource DescriptionBoxStyle}" />
+            </StackPanel>
+        </ScrollViewer>
+
+        <Separator Grid.Row="3" />
+
+        <StackPanel Orientation="Horizontal" Grid.Row="4" HorizontalAlignment="Right">
+            <Button Name="Create">Create</Button>
+            <Button Name="Update">Update</Button>
+            <Button Name="Close">Close</Button>
+        </StackPanel>
+    </Grid>
+</Window>

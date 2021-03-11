@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <AssemblyName>Kukshaus.InTime.Aggregation</AssemblyName>
+        <RootNamespace>Kukshaus.InTime.Infrastructure.Aggregation</RootNamespace>
+        <LangVersion>9</LangVersion>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Ninject" Version="3.3.4" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\IssueDataStorage.InMemory\IssueDataStorage.InMemory.csproj" />
+      <ProjectReference Include="..\IssueManagement.Contract\IssueManagement.Contract.csproj" />
+      <ProjectReference Include="..\IssueManagement\IssueManagement.csproj" />
+      <ProjectReference Include="..\StaticProxying\StaticProxying.csproj" />
+      <ProjectReference Include="..\UserDataStorage.Contract\UserDataStorage.Contract.csproj" />
+      <ProjectReference Include="..\UserDataStorage.InMemory\UserDataStorage.InMemory.csproj" />
+    </ItemGroup>
+
+</Project>

@@ -2,14 +2,16 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
-        <RootNamespace>Kukshaus.InTime.Data.IssueDataStorage.InMemory</RootNamespace>
-        <AssemblyName>Kukshaus.InTime.IssueDataStorage.InMemory</AssemblyName>
+        <AssemblyName>Kukshaus.InTime.IssueManagement</AssemblyName>
+        <RootNamespace>Kukshaus.InTime.Logic.IssueManagement</RootNamespace>
         <LangVersion>9</LangVersion>
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\IssueDataStorage.Contract\IssueDataStorage.Contract.csproj" />
+      <ProjectReference Include="..\IssueManagement.Contract\IssueManagement.Contract.csproj" />
+      <ProjectReference Include="..\StaticProxing.Contract\StaticProxing.Contract.csproj" />
     </ItemGroup>
 
 </Project>

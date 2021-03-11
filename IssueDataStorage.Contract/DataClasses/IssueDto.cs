@@ -1,7 +1,11 @@
-﻿namespace Kukshaus.InTime.Data.IssueDataStorage.Contract.DataClasses
+﻿using System;
+
+namespace Kukshaus.InTime.Data.IssueDataStorage.Contract.DataClasses
 {
-    public class IssueDto
+    public sealed class IssueDto
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
+        public string Name { get; set; } = string.Empty;
+        public string Description { get; set; } = string.Empty;
     }
 }

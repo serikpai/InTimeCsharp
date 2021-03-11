@@ -2,7 +2,7 @@
 
 namespace Kukshaus.InTime.CrossCutting.DataClasses.ValueObjects
 {
-    public struct IssueName : IValueObject, IEquatable<IssueName>
+    public readonly struct IssueName : IValueObject, IEquatable<IssueName>
     {
         private readonly string _name;
 
@@ -16,19 +16,24 @@ namespace Kukshaus.InTime.CrossCutting.DataClasses.ValueObjects
             return new IssueName(name);
         }
 
+        public static implicit operator string(IssueName name)
+        {
+            return name._name;
+        }
+
         public bool Equals(IssueName other)
         {
             return _name == other._name;
         }
 
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             return obj is IssueName other && Equals(other);
         }
 
         public override int GetHashCode()
         {
-            return (_name != null ? _name.GetHashCode() : 0);
+            return _name.GetHashCode();
         }
 
         public static bool operator ==(IssueName left, IssueName right)

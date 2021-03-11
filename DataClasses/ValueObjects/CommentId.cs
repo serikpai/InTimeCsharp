@@ -38,7 +38,7 @@ namespace Kukshaus.InTime.CrossCutting.DataClasses.ValueObjects
 
         public bool Equals(CommentId other)
         {
-            return _id == (int)other;
+            return _id == (int) other;
         }
 
         public override bool Equals(object obj)
@@ -63,7 +63,7 @@ namespace Kukshaus.InTime.CrossCutting.DataClasses.ValueObjects
 
         public override string ToString()
         {
-            return (string)this;
+            return (string) this;
         }
     }
 }

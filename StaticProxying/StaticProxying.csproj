@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <RootNamespace>Kukshaus.InTime.CrossCutting.StaticProxying</RootNamespace>
+        <AssemblyName>Kukshaus.InTime.StaticProxying</AssemblyName>
+        <LangVersion>9</LangVersion>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\StaticProxing.Contract\StaticProxing.Contract.csproj" />
+    </ItemGroup>
+
+</Project>

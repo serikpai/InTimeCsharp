@@ -8,9 +8,9 @@ using Kukshaus.InTime.CrossCutting.DataClasses.ValueObjects;
 
 namespace InTime.Ui.TestApp
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             var issue = new Issue();
             issue.Id = 1;

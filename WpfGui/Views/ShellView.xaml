@@ -1,0 +1,14 @@
+﻿<Window x:Class="Kukshaus.InTime.Gui.WpfGui.Views.ShellView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:Kukshaus.InTime.Gui.WpfGui.Views"
+        mc:Ignorable="d"
+        Title="ShellView" Height="450" Width="800">
+    <StackPanel>
+        <ListBox Name="OpenIssues"></ListBox>
+        
+        <Button x:Name="Create">Create</Button>
+    </StackPanel>
+</Window>

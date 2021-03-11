@@ -3,7 +3,8 @@ using Kukshaus.InTime.CrossCutting.DataClasses.Aggregates;
 using Kukshaus.InTime.CrossCutting.DataClasses.ValueObjects;
 
 // 1lI O0
-// 0O l1 Z2 S5 G6 B8 71 lI vy
+// 0O l1 Z2 S5 G6 B8 71 lI vy hn
+// <= => >= - = != == != === !==  111 www
 
 namespace InTime.Ui.TestApp
 {
@@ -21,7 +22,7 @@ namespace InTime.Ui.TestApp
             IssueId issueId = 4;
             IssueId issue2 = 4;
 
-            if (issueId.GetHashCode() == issue2.GetHashCode())
+            if (issueId == issue2)
             {
                 Console.WriteLine("same");
             }

@@ -1,6 +1,10 @@
 ﻿using System.Runtime.InteropServices;
 using Caliburn.Micro;
 
+// 1lI O0
+// 0O l1 Z2 S5 G6 B8 71 lI vy hn
+// <= => >= - = != == != === !==  111 www
+
 namespace Kukshaus.InTime.Gui.WpfGui.ViewModels
 {
     public class ShellViewModel : Screen
@@ -17,7 +21,7 @@ namespace Kukshaus.InTime.Gui.WpfGui.ViewModels
         public void Create()
         {
             _issueUpsertVm.InitNew();
-            _windowManager.ShowDialog(_issueUpsertVm);
+            var wasCreated = _windowManager.ShowDialog(_issueUpsertVm);
         }
     }
 }

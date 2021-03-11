@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows;
+using System.Windows.Threading;
 using Caliburn.Micro;
 using Kukshaus.InTime.Gui.WpfGui.ViewModels;
 using Kukshaus.InTime.Infrastructure.Aggregation;
@@ -48,6 +49,22 @@ namespace Kukshaus.InTime.Gui.WpfGui
         protected override void BuildUp(object instance)
         {
             _kernel.Inject(instance);
+        }
+        
+        protected override void OnUnhandledException(object sender, DispatcherUnhandledExceptionEventArgs e)
+        {
+            var exception = e.Exception.InnerException ?? e.Exception;
+
+            var message = exception.Message;
+#if DEBUG
+            message += "\r\n" + exception.StackTrace;
+#endif
+
+            MessageBox.Show(message, "Issue tracker",
+                MessageBoxButton.OK, MessageBoxImage.Error);
+
+            e.Handled = true;
+            base.OnUnhandledException(sender, e);
         }
     }
 }

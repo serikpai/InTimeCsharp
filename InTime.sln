@@ -37,6 +37,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaticProxing.Contract", "S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaticProxying", "StaticProxying\StaticProxying.csproj", "{4FB831BD-CB84-4800-8B2A-46B38F2C3F98}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfGui.Tests", "WpfGui.Tests\WpfGui.Tests.csproj", "{24B594B4-F8C9-4F28-8998-E1D46AF1F711}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -91,6 +93,10 @@ Global
 		{4FB831BD-CB84-4800-8B2A-46B38F2C3F98}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4FB831BD-CB84-4800-8B2A-46B38F2C3F98}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4FB831BD-CB84-4800-8B2A-46B38F2C3F98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24B594B4-F8C9-4F28-8998-E1D46AF1F711}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24B594B4-F8C9-4F28-8998-E1D46AF1F711}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24B594B4-F8C9-4F28-8998-E1D46AF1F711}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24B594B4-F8C9-4F28-8998-E1D46AF1F711}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -111,5 +117,6 @@ Global
 		{2BF1AF53-9713-41E5-A34A-A185A37FD31B} = {D65FA484-11D4-41E8-A69F-FB623993D490}
 		{BEDE3835-C03B-436F-9C3A-27A6D24C75E5} = {54489486-7517-4F5F-A290-FB7D3F496A7B}
 		{4FB831BD-CB84-4800-8B2A-46B38F2C3F98} = {54489486-7517-4F5F-A290-FB7D3F496A7B}
+		{24B594B4-F8C9-4F28-8998-E1D46AF1F711} = {3BD590D0-A64D-4601-990B-A9228996E615}
 	EndGlobalSection
 EndGlobal

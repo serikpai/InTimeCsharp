@@ -8,42 +8,33 @@ namespace Kukshaus.InTime.CrossCutting.DataClasses.ValueObjects
 
         private IssueName(string name)
         {
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                throw new ArgumentException("Issue name cannot be empty.", nameof(name));
+            }
+
             _name = name;
         }
 
         public static implicit operator IssueName(string name)
-        {
-            return new IssueName(name);
-        }
+            => new IssueName(name);
 
         public static implicit operator string(IssueName name)
-        {
-            return name._name;
-        }
+            => name._name;
 
         public bool Equals(IssueName other)
-        {
-            return _name == other._name;
-        }
+            => _name == other._name;
 
         public override bool Equals(object? obj)
-        {
-            return obj is IssueName other && Equals(other);
-        }
+            => obj is IssueName other && Equals(other);
 
         public override int GetHashCode()
-        {
-            return _name.GetHashCode();
-        }
+            => _name.GetHashCode();
 
         public static bool operator ==(IssueName left, IssueName right)
-        {
-            return left.Equals(right);
-        }
+            => left.Equals(right);
 
         public static bool operator !=(IssueName left, IssueName right)
-        {
-            return !left.Equals(right);
-        }
+            => !left.Equals(right);
     }
 }

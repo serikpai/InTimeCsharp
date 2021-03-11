@@ -5,7 +5,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         mc:Ignorable="d"
         FontFamily="Roboto Mono"
-        Title="Create Task" Height="450" Width="800" WindowStyle="ToolWindow">
+        Title="{Binding Path=Model.WindowTitle}" Height="450" Width="800" WindowStyle="ToolWindow">
     <Window.Resources>
         <Style x:Key="PropertyLabelStyle" TargetType="Label">
             <Setter Property="FontStyle" Value="Italic" />
@@ -25,7 +25,6 @@
             <Setter Property="AcceptsTab" Value="True" />
             <Setter Property="MinHeight" Value="250" />
         </Style>
-
 
         <Style TargetType="Button">
             <Setter Property="MinWidth" Value="120" />

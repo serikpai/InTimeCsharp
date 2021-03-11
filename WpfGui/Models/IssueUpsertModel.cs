@@ -6,17 +6,46 @@ namespace Kukshaus.InTime.Gui.WpfGui.Models
     {
         private string _description = string.Empty;
         private string _name = string.Empty;
+        private string _windowTitle = string.Empty;
+
+        public string WindowTitle
+        {
+            get => _windowTitle;
+            set => Set(ref _windowTitle, value);
+        }
 
         public string Name
         {
             get => _name;
-            set => Set(ref _name, value);
+            set
+            {
+                if (value == _name)
+                {
+                    return;
+                }
+
+                _name = value;
+                IsDirty = true;
+                NotifyOfPropertyChange(() => Name);
+            }
         }
 
         public string Description
         {
             get => _description;
-            set => Set(ref _description, value);
+            set
+            {
+                if (value == _description)
+                {
+                    return;
+                }
+
+                _description = value;
+                IsDirty = true;
+                NotifyOfPropertyChange(() => Description);
+            }
         }
+
+        public bool IsDirty { get; private set; }
     }
 }

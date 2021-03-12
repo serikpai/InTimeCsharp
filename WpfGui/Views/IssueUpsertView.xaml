@@ -56,8 +56,8 @@
         <Separator Grid.Row="3" />
 
         <StackPanel Orientation="Horizontal" Grid.Row="4" HorizontalAlignment="Right">
-            <Button Name="Create">Create</Button>
-            <Button Name="Update">Update</Button>
+            <Button Name="Create" Visibility="{Binding Path=Model.IsCreationMode, Converter={StaticResource BooleanToVisibilityConverter}}">Create</Button>
+            <Button Name="Update" Visibility="{Binding Path=Model.IsEditorMode, Converter={StaticResource BooleanToVisibilityConverter}}">Update</Button>
             <Button Name="Close">Close</Button>
         </StackPanel>
     </Grid>

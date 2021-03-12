@@ -2,68 +2,31 @@
 
 namespace Kukshaus.InTime.CrossCutting.DataClasses.ValueObjects
 {
-    public struct IssueId : IValueObject, IEquatable<IssueId> /*IEquatable<IssueId>*/
+    public readonly struct IssueId : IValueObject
     {
-        private readonly int _id;
+        private readonly Guid _id;
 
-        private IssueId(int id)
+        private IssueId(Guid id)
         {
-            if (id <= 0)
+            if (id == Guid.Empty)
             {
-                throw new ArgumentException("The issue id must be a positive number.");
+                throw new ArgumentException("The issue id must be a valid guid.");
             }
 
             _id = id;
         }
 
-        public int GetTheId()
-        {
-            return _id;
-        }
+        public static implicit operator IssueId(Guid id)
+            => new IssueId(id);
 
-        public static implicit operator IssueId(int id)
-        {
-            return new IssueId(id);
-        }
-
-        public static explicit operator int(IssueId id)
-        {
-            return id._id;
-        }
+        public static implicit operator Guid(IssueId id)
+            => id._id;
 
         public static explicit operator string(IssueId id)
-        {
-            return id._id.ToString();
-        }
-
-        public bool Equals(IssueId other)
-        {
-            return _id == other._id;
-        }
-
-        public override bool Equals(object obj)
-        {
-            return obj is IssueId other && Equals(other);
-        }
-
-        public override int GetHashCode()
-        {
-            return _id.GetHashCode();
-        }
-
-        public static bool operator ==(IssueId a, IssueId b)
-        {
-            return Equals(a, b);
-        }
-
-        public static bool operator !=(IssueId a, IssueId b)
-        {
-            return !Equals(a, b);
-        }
+            => id._id.ToString();
 
         public override string ToString()
-        {
-            return (string) this;
-        }
+            => (string) this;
+
     }
 }

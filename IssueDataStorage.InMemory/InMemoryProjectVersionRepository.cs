@@ -15,5 +15,15 @@ namespace Kukshaus.InTime.Data.IssueDataStorage.InMemory
         {
             throw new System.NotImplementedException();
         }
+
+        public void Update(ProjectVersionDto dto)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void Remove(ProjectVersionDto dto)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

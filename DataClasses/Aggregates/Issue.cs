@@ -11,6 +11,7 @@ namespace Kukshaus.InTime.CrossCutting.DataClasses.Aggregates
         public IssueName Name { get; set; }
         public IssuePriority Priority { get; set; }
         public IssueType Type { get; set; }
+        public IssueStatus Status { get; set; }
         public DateTime CreationTime { get; set; }
         public DateTime LastUpdate { get; set; }
 

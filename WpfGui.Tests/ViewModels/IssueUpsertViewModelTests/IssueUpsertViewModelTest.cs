@@ -20,7 +20,7 @@ namespace Kukshaus.InTime.Gui.WpfGui.Tests.ViewModels.IssueUpsertViewModelTests
             
             var issueManager = Substitute.For<IIssueManager>();
             issueManager
-                .When(m => m.CreateIssue(Arg.Any<Issue>()))
+                .When(m => m.Create(Arg.Any<Issue>()))
                 .Do(x => CreatedIssues.Add(x.Arg<Issue>()));
 
             ViewModel = new IssueUpsertViewModel(issueManager);

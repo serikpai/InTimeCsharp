@@ -3,11 +3,37 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:cal="http://www.caliburnproject.org"
         mc:Ignorable="d"
-        Title="ShellView" Height="450" Width="800">
-    <StackPanel>
-        <ListBox Name="OpenIssues" />
+        FontFamily="Roboto Mono"
+        Title="Simple Issue Tracker (SiT)" Height="450" Width="800">
+    <Window.Resources>
 
-        <Button x:Name="Create">Create</Button>
+        <Style TargetType="Button">
+            <Setter Property="MinWidth" Value="120" />
+            <Setter Property="Padding" Value="5" />
+            <Setter Property="Margin" Value="2" />
+            <Setter Property="FontSize" Value="13" />
+        </Style>
+    </Window.Resources>
+
+    <StackPanel>
+        <ListBox ItemsSource="{Binding Path=Model.OpenIssues}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+
+                    <StackPanel HorizontalAlignment="Center" Background="Chartreuse">
+                        <Label Content="{Binding Path=Name}"
+                               HorizontalContentAlignment="Stretch"
+                               HorizontalAlignment="Stretch"
+                               Background="Aqua"
+                               cal:Message.Attach="[MouseDoubleClick]=[OpenIssue($dataContext)]">
+                    </Label>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <Button x:Name="CreateIssue">Create</Button>
     </StackPanel>
 </Window>

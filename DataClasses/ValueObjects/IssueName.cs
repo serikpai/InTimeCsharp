@@ -22,6 +22,9 @@ namespace Kukshaus.InTime.CrossCutting.DataClasses.ValueObjects
         public static implicit operator string(IssueName name)
             => name._name;
 
+        public override string ToString()
+            => (string) this;
+
         public bool Equals(IssueName other)
             => _name == other._name;
 

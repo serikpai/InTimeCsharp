@@ -9,6 +9,7 @@ namespace Kukshaus.InTime.Infrastructure.Aggregation.CrossCutting
         public override void Load()
         {
             Bind<IGuidProxy>().To<GuidProxy>();
+            Bind<IDateTimeProxy>().To<DateTimeProxy>();
         }
     }
 }

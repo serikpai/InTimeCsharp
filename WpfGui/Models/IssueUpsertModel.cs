@@ -7,6 +7,8 @@ namespace Kukshaus.InTime.Gui.WpfGui.Models
         private string _description = string.Empty;
         private string _name = string.Empty;
         private string _windowTitle = string.Empty;
+        private bool _isEditorMode;
+        private bool _isCreationMode;
 
         public string WindowTitle
         {
@@ -47,5 +49,23 @@ namespace Kukshaus.InTime.Gui.WpfGui.Models
         }
 
         public bool IsDirty { get; private set; }
+
+        public bool IsCreationMode
+        {
+            get => _isCreationMode;
+            set => Set(ref _isCreationMode, value);
+        }
+
+        public bool IsEditorMode
+        {
+            get => _isEditorMode;
+            set => Set(ref _isEditorMode, value);
+        }
+
+        public IssueUpsertModel(bool editorMode)
+        {
+            IsCreationMode = !editorMode;
+            IsEditorMode = editorMode;
+        }
     }
 }

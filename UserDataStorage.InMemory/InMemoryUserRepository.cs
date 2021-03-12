@@ -15,5 +15,15 @@ namespace Kukshaus.InTime.Data.UserDataStorage.InMemory
         public void Create(UserDto dto)
         {
         }
+
+        public void Update(UserDto dto)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Remove(UserDto dto)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

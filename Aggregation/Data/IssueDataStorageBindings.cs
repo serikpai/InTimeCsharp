@@ -8,7 +8,8 @@ namespace Kukshaus.InTime.Infrastructure.Aggregation.Data
     {
         public override void Load()
         {
-            Bind<IIssueRepository>().To<InMemoryIssueRepository>();
+            Bind<IIssueRepository>().To<InMemoryIssueRepository>().InSingletonScope();
+            Bind<IProjectVersionRepository>().To<InMemoryProjectVersionRepository>().InSingletonScope();
         }
     }
 }
